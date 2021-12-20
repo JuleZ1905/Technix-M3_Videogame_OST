@@ -1,6 +1,6 @@
 <?php
 
-class Track
+class Track implements JsonSerializable
 {
 
     public function __construct(int $id, string $name, string $artist, int $tracknumber, string $duration)
@@ -30,5 +30,17 @@ class Track
     public function getTracknumber()
     {
         return $this->tracknumber;
+    }
+
+    public function jsonSerialize()
+    {
+        // TODO: Implement jsonSerialize() method.
+        return[
+            'id'=> $this->id,
+            'name'=> $this->name,
+            'artist'=> $this->artist,
+            'tracknumber'=> $this->tracknumber,
+            'duration'=> $this->duration,
+        ];
     }
 }
