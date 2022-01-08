@@ -1,5 +1,9 @@
 <?php
 
+namespace M3_VideogameOST\Website\songClasses;
+
+use JsonSerializable;
+
 class VideogameOST implements JsonSerializable
 {
 
@@ -25,3 +29,5 @@ class VideogameOST implements JsonSerializable
         ];
     }
 }
+
+?>

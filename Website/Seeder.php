@@ -1,6 +1,8 @@
 <?php
 
-
+namespace M3_VideogameOST\Website;
+use M3_VideogameOST\Website\songClasses\VideogameOST;
+use M3_VideogameOST\Website\songClasses\Track;
 
 require_once "songClasses/VideogameOST.php";
 require_once "songClasses/Track.php";
@@ -9,7 +11,7 @@ require_once "songClasses/Track.php";
 class Seeder
 {
 
-    public function seed()
+    public static function seed()
     {
         $videogames[] = new VideogameOST(1, "Super Mario Bros Theme", "Super Mario Bros", "2000", [
             new Track(1, "Intro", "Koji Kondo", 1, "1:54"),
@@ -30,6 +32,8 @@ class Seeder
             new Track(4, "You cannot Trust a Liar", "Dan Romer", 3, "2:18")
         ]);
 
-        return $videogames;
+        $allOSTs = array('Super Mario'=>$videogames[0], 'Minecraft'=>$videogames[1], 'Far Cry 5'=>$videogames[2]);
+
+        return $allOSTs;
     }
 }
