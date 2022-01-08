@@ -1,6 +1,6 @@
 <?php
 
-class VideogameOST
+class VideogameOST implements JsonSerializable
 {
 
     public function __construct(int $id, string $name, string $videoGameName, string $releaseYear, array $tracks)
@@ -12,5 +12,16 @@ class VideogameOST
         $this->tracks = $tracks;
     }
 
-    
+
+    public function jsonSerialize()
+    {
+        // TODO: Implement jsonSerialize() method.
+        return[
+            'id'=> $this->id,
+            'name'=> $this->name,
+            'videoGameName'=> $this->videoGameName,
+            'releaseYear'=> $this->releaseYear,
+            'tracks'=> $this->tracks,
+        ];
+    }
 }
