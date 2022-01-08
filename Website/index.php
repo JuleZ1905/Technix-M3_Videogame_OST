@@ -7,10 +7,7 @@
     <title>Videogame OSTs</title>
 </head>
 <body>
-    
-
 <?php
-
 
 ?>
 
