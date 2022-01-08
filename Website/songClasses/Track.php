@@ -16,26 +16,6 @@ class Track implements JsonSerializable
         $this->duration = $duration;
     }
 
-    public function getID()
-    {
-        return $this->id;
-    }
-
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    public function getArtist()
-    {
-        return $this->artist;
-    }
-
-    public function getTracknumber()
-    {
-        return $this->tracknumber;
-    }
-
     public function jsonSerialize()
     {
         return [
