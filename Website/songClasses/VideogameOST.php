@@ -1,5 +1,9 @@
 <?php
 
+namespace M3_VideogameOST\Website\songClasses;
+
+use JsonSerializable;
+
 class VideogameOST implements JsonSerializable
 {
 
@@ -12,16 +16,15 @@ class VideogameOST implements JsonSerializable
         $this->tracks = $tracks;
     }
 
-
     public function jsonSerialize()
     {
         // TODO: Implement jsonSerialize() method.
-        return[
-            'id'=> $this->id,
-            'name'=> $this->name,
-            'videoGameName'=> $this->videoGameName,
-            'releaseYear'=> $this->releaseYear,
-            'tracks'=> $this->tracks,
+        return [
+            'id' => $this->id,
+            'name' => $this->name,
+            'videoGameName' => $this->videoGameName,
+            'releaseYear' => $this->releaseYear,
+            'tracks' => $this->tracks,
         ];
     }
 }
