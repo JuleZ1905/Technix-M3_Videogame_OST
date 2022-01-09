@@ -37,7 +37,7 @@ require_once 'Seeder.php';
             <?php
             }
             ?>
-            <option value="all">All Songs</option>
+            <option value="all">AllSongs</option>
         </select>
         <br>
         <button style="margin:15px" type="submit">Submit</button>
@@ -58,7 +58,5 @@ require_once 'Seeder.php';
         }
     }
     ?>
-
 </body>
-
 </html>
