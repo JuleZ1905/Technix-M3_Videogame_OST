@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteRule "^collection/?$" "index.php" [NC]
+RewriteRule "^collection/([A-Za-z0-9]+)/?$" "index.php?OST\_name=$1" [NC]
+
